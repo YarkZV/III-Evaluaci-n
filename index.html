@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Viaje</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="banner-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/cine-67702.appspot.com/o/logo.png?alt=media&token=9aaab5e8-f714-4ee1-ae8f-6bdb3131b75d" width="25%" alt="">
+        <img class="banner" src="https://firebasestorage.googleapis.com/v0/b/cine-67702.appspot.com/o/banner.jfif?alt=media&token=4736f2a2-7d55-4f8f-bd0d-6f7dad2b75a7" alt="">
+    </div>
+
+    <h1>El Placer De Viajar en Bus</h1>
+
+    <div class="content-container">
+        <img src="https://firebasestorage.googleapis.com/v0/b/cine-67702.appspot.com/o/unidad.png?alt=media&token=4d1d7a7c-f7f4-4f1c-a2f8-5a0f8909bece" alt="" style="float: left; margin-right: 20px; width: 50%; height: auto;">
+
+        <div class="content-box">
+            <p>Boleta de Viaje</p>
+            <form>
+                <div class="form-container">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+                        <div class="form-group">
+                            <label for="dni">DNI:</label>
+                            <input type="text" id="dni" name="dni">
+                        </div>
+                        <div class="form-group">
+                            <label for="ruta">Ruta:</label>
+                            <select id="ruta" name="ruta">
+                                <option value="Lima - Mala">Lima - Mala</option>
+                                <option value="Lima - Cañete">Lima - Cañete</option>
+                                <option value="Lima - Chincha">Lima - Chincha</option>
+                                <option value="Lima - Pisco">Lima - Pisco</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" name="cantidad">
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">Servicio:</label>
+                            <select id="servicio" name="servicio">
+                                <option value="Económico">Económico</option>
+                                <option value="Ejecutivo">Ejecutivo</option>
+                                <option value="Presidencial">Presidencial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="medio-pago">Medio de pago:</label>
+                            <select id="medio-pago" name="medio-pago">
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Tarjeta crédito">Tarjeta crédito</option>
+                                <option value="Tarjeta débito">Tarjeta débito</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="pasajero">Pasajero:</label>
+                            <input type="text" id="pasajero" name="pasajero">
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Precio:</label>
+                            <input type="text" id="precio" name="precio" readonly style="background-color: #fffdd0;">
+                        </div>
+                        <div class="form-group">
+                            <label for="total-us">Total US$:</label>
+                            <input type="text" id="total-us" name="total-us" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button type="button" id="calcularBtn">Calcular</button>
+                    <button type="button" id="limpiarBtn">Limpiar</button>
+                    <button type="button" onclick="window.print()">Imprimir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
